@@ -6,6 +6,7 @@
 
 .itemkpi {
   min-width: 15rem;
+  max-width: min-content;
   margin: 1rem ;
   background: rgb(0, 255, 255);
   padding: 1rem;
@@ -82,27 +83,27 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: 14px;
+  font-size: .75rem;
 }
 
 h6 {
-  font-size: 12px;
+  font-size: .7rem;
 }
 
 .text-muted {
@@ -115,28 +116,28 @@ small,
 }
 
 .lead {
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 1.4;
+ 
 }
 
 @media (min-width: 768px) {
   .lead {
-    font-size: 21px;
+    font-size: 1.35rem;
   }
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1.rem;
+  
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .container {
-    width: 1170px;
+    width: 1070px;
   }
 }
 
@@ -680,10 +681,11 @@ button {
 /* KEEN */
 
 .keen-dashboard {
-  padding-top: 80px;
+  padding-top: 60px;
   background: #f2f2f2;
   font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", "Helvetica Neue",
     Helvetica, Arial, sans-serif;
+    justify-content: center;
 }
 
 .keen-dataviz {
