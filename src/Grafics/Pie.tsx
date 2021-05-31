@@ -4,8 +4,8 @@ export default function Pie(props){
 
     return (
       <Chart
-        width={"100px"}
-        height={"50px"}
+        width={"95%"}
+        height={"300px"}
         chartType="PieChart"
         loader={<div>Carregando dados</div>}
         data={[

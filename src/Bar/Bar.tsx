@@ -33,7 +33,7 @@ export default function Bar({sortedCountries}){
     return (
       <Chart
         width={"100%"}
-        height={"100px"}
+        height={"250px"}
         chartType="Bar"
         loader={<div>Loading Chart</div>}
         data={[["Countrie", "Deaths"], ...sortedCountries]}
