@@ -36,7 +36,7 @@ export default function Bar({sortedCountries}){
         height={"250px"}
         chartType="Bar"
         loader={<div>Loading Chart</div>}
-        data={[["Countrie", "Deaths"], ...sortedCountries]}
+        data={[["Countries", "Deaths"], ...sortedCountries]}
         options={{
           // Material design options
           chart: {

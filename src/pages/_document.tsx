@@ -6,8 +6,9 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        <meta charSet="utf-8" />
-    <title>Números de Covid por país</title>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            
         </Head>
 
         <body className="keen-dashboard">
@@ -16,6 +17,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
