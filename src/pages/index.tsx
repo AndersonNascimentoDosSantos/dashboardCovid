@@ -72,60 +72,65 @@ const newdate = format(parseISO(Global.Date),'dd MMM yyyy',{
   locale:ptBR
 })
  return (
-
-
    <div>
-  <div className="container">
-  <div className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div className="navbar-collapse">
-      <ul className="navbar-nav nav main-nav">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../country.html">País</a></li>
-        <li><a href="#">Top 5</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+     <div className="container">
+       <div
+         className="navbar navbar-inverse navbar-fixed-top"
+         role="navigation"
+       >
+         <div className="navbar-collapse">
+           <ul className="navbar-nav nav main-nav">
+             <li>
+               <a href="../index.html">Home</a>
+             </li>
+             <li>
+               <a href="../country.html">País</a>
+             </li>
+             <li>
+               <a href="#">Top 5</a>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </div>
 
-<div className="container grid grid-two-and-one">
-  <div className="chart-wrapper">
-    <div className="containerkpi wrapkpi">
-      <section className="itemkpi">
-        <h5>Total Confirmados</h5>
-        <p id="confirmed">{Global.TotalConfirmed}</p>
-      </section>
-      <section className="itemkpi">
-        <h5>Total Mortes</h5>
-        <p id="death">{Global.TotalDeaths}</p>
-      </section>
-      <section className="itemkpi">
-        <h5>Total Recuperados</h5>
-        <p id="recovered">{Global.TotalRecovered}</p>
-      </section>
-    </div>
-    <div className="chart-notes" id="date">Data de atualização:{newdate}</div>
-  </div>
-  <div className="chart-wrapper">
-    <div className="chart-stage">
-      <canvas id="pizza" width="100" height="50"></canvas>
-      <Pie Global={Global}/>
-      {/* <!--Adicionar grafico--> */}
-    </div>
-  </div>
-  <div className="two">
-    <div className="chart-wrapper">
-      <div className="chart-stage">
-        {/* <!--Adicionar grafico--&gt; */}
-        <canvas id="barras" width="300" height="100">
-         
-        </canvas>
-        <Bar sortedCountries={sortedCountries}/>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-  )
+     <div className="container grid grid-two-and-one">
+       <div className="chart-wrapper">
+         <div className="containerkpi wrapkpi">
+           <section className="itemkpi">
+             <h5>Total Confirmados</h5>
+             <p id="confirmed">{Global.TotalConfirmed}</p>
+           </section>
+           <section className="itemkpi">
+             <h5>Total Mortes</h5>
+             <p id="death">{Global.TotalDeaths}</p>
+           </section>
+           <section className="itemkpi">
+             <h5>Total Recuperados</h5>
+             <p id="recovered">{Global.TotalRecovered}</p>
+           </section>
+         </div>
+         <div className="chart-notes" id="date">
+           Data de atualização:{newdate}
+         </div>
+       </div>
+       <div className="chart-wrapper">
+         <div className="chart-stage">
+           <Pie Global={Global} />
+           {/* <!--Adicionar grafico--> */}
+         </div>
+       </div>
+       <div className="two">
+         <div className="chart-wrapper">
+           <div className="chart-stage">
+             {/* <!--Adicionar grafico--&gt; */}
+               <Bar sortedCountries={sortedCountries} />
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ );
 }
 
 export const getStaticProps: GetStaticProps = async () => {

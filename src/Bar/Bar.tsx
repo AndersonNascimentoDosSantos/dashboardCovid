@@ -30,25 +30,19 @@ export default function Bar({sortedCountries}){
    
     // console.log(`countries in barChart ${sortedCountries}`)
     
-    return(
-        <Chart
-  width={'100%'}
-  height={'300px'}
-  chartType="Bar"
-  loader={<div>Loading Chart</div>}
-  data={[
-    ['Countrie', 'Deaths'],
-    ...sortedCountries
-  ]}
-  options={{
-    // Material design options
-    chart: {
-      title: 'Total de mortes por pais - top 10'
-      
-    },
-  }}
-  
- 
-/>
-    )
+    return (
+      <Chart
+        width={"100%"}
+        height={"100px"}
+        chartType="Bar"
+        loader={<div>Loading Chart</div>}
+        data={[["Countrie", "Deaths"], ...sortedCountries]}
+        options={{
+          // Material design options
+          chart: {
+            title: "Total de mortes por pais - top 10",
+          },
+        }}
+      />
+    );
 }
